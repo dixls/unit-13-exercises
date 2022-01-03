@@ -75,7 +75,16 @@
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <script>
   // Add your code here!
-  
+  $( document ).ready(console.log("Let’s get ready to party with jQuery!"));
+  $('img').addClass('image-center');
+  $('p').last().remove();
+  $('#title').css('font-size', Math.floor(Math.random()*100));
+  $('ol').append("<li>I do not even know</li>");
+  $('aside').empty().append("<p>I am so sorry for this list. It was a terrible idea from the beginning, but it was not my idea, I promise.</p>");
+  $('.mb-5').on('keyup', 'input', function() {
+    $('body').css("background-color", `rgb(${$('input').eq(0).val()},${$('input').eq(1).val()},${$('input').eq(2).val()})`)
+  });
+  $('img').on('click', function() {$(this).remove()});
 </script>
 </body>
 
